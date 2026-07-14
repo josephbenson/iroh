@@ -132,7 +132,7 @@
       <div class="max-w-[1100px] mx-auto px-4 sm:px-6">
         <p class="font-mono text-xs text-accent uppercase tracking-[0.2em] mb-3">The Edge</p>
         <h2 class="font-display text-2xl md:text-4xl font-semibold mb-8 md:mb-10">What Makes This Different</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6">
           <div class="bg-surface rounded-lg p-6 border border-white/5 transition-colors duration-200 ease-out hover:border-white/10">
             <p class="font-mono text-xs text-muted uppercase tracking-wide mb-2">The Combo</p>
             <p class="text-base leading-relaxed">The only place staffed for hardware + software + AI problems — no single company here has all three.</p>
@@ -144,10 +144,6 @@
           <div class="bg-surface rounded-lg p-6 border border-white/5 transition-colors duration-200 ease-out hover:border-white/10">
             <p class="font-mono text-xs text-muted uppercase tracking-wide mb-2">The Data</p>
             <p class="text-base leading-relaxed">The ground-truth data layer isn't the product — it's the exhaust from doing the work.</p>
-          </div>
-          <div class="bg-surface rounded-lg p-6 border border-white/5 transition-colors duration-200 ease-out hover:border-white/10">
-            <p class="font-mono text-xs text-muted uppercase tracking-wide mb-2">The Proof</p>
-            <p class="text-base leading-relaxed">Two cohorts already shipped. Total cost: about $6K a year.</p>
           </div>
         </div>
       </div>
@@ -201,69 +197,30 @@
       </div>
     </section>
 
-    <section id="team" class="py-16 md:py-24">
-      <div class="max-w-[1100px] mx-auto px-4 sm:px-6">
-        <p class="font-mono text-xs text-accent uppercase tracking-[0.2em] mb-3">The Team</p>
-        <h2 class="font-display text-2xl md:text-4xl font-semibold mb-8 md:mb-10">Who's Behind This</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-          <div class="bg-surface rounded-lg p-6 border border-white/5 transition-colors duration-200 ease-out hover:border-white/10">
-            <div class="w-16 h-16 rounded-full bg-surface border border-white/10 mb-4"></div>
-            <h3 class="font-display text-lg font-semibold">[PLACEHOLDER] Name</h3>
-            <p class="font-mono text-sm text-accent font-medium uppercase tracking-wide">[PLACEHOLDER] Title</p>
-            <p class="text-base leading-relaxed text-muted">[PLACEHOLDER] One-line bio</p>
-          </div>
-          <div class="bg-surface rounded-lg p-6 border border-white/5 transition-colors duration-200 ease-out hover:border-white/10">
-            <div class="w-16 h-16 rounded-full bg-surface border border-white/10 mb-4"></div>
-            <h3 class="font-display text-lg font-semibold">[PLACEHOLDER] Name</h3>
-            <p class="font-mono text-sm text-accent font-medium uppercase tracking-wide">[PLACEHOLDER] Title</p>
-            <p class="text-base leading-relaxed text-muted">[PLACEHOLDER] One-line bio</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section id="cta" class="py-16 md:py-24">
       <div class="max-w-[1100px] mx-auto px-4 sm:px-6">
         <p class="font-mono text-xs text-accent uppercase tracking-[0.2em] mb-3">Get Involved</p>
         <h2 class="font-display text-2xl md:text-4xl font-semibold mb-8 md:mb-10">Where Do You Fit?</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-          <div class="bg-surface rounded-lg p-6 border border-white/5 transition-colors duration-200 ease-out hover:border-white/10">
-            <h3 class="font-display text-lg font-semibold mb-2">Interested in posting a project?</h3>
-            <p class="text-sm text-muted leading-relaxed mb-4">Bring a real R&amp;D problem. We'll match it with engineers who can actually solve it.</p>
-            <form action="[FORMSPREE_ENDPOINT_PLACEHOLDER]" method="POST">
-              <label for="companies-email" class="sr-only">Your company email</label>
-              <input type="email" id="companies-email" name="email" required placeholder="you@company.com" class="w-full rounded-lg p-3 mb-4 bg-bg border border-white/10 text-primary transition-colors duration-200 focus:outline-none focus:border-accent" />
-              <input type="hidden" name="audience" value="companies" />
-              <button type="submit" class="w-full bg-accent text-bg font-semibold font-mono text-sm uppercase tracking-wide rounded-lg p-3 transition-opacity duration-200 hover:opacity-90">Post a Problem</button>
-            </form>
-          </div>
-          <div class="bg-surface rounded-lg p-6 border border-white/5 transition-colors duration-200 ease-out hover:border-white/10">
-            <h3 class="font-display text-lg font-semibold mb-2">Know a high-agency engineer?</h3>
-            <p class="text-sm text-muted leading-relaxed mb-4">Refer someone high-agency. If they qualify, they're in the pipeline.</p>
-            <form action="[FORMSPREE_ENDPOINT_PLACEHOLDER]" method="POST">
-              <label for="engineers-email" class="sr-only">Your email</label>
-              <input type="email" id="engineers-email" name="email" required placeholder="you@example.com" class="w-full rounded-lg p-3 mb-4 bg-bg border border-white/10 text-primary transition-colors duration-200 focus:outline-none focus:border-accent" />
-              <input type="hidden" name="audience" value="engineers" />
-              <button type="submit" class="w-full bg-accent text-bg font-semibold font-mono text-sm uppercase tracking-wide rounded-lg p-3 transition-opacity duration-200 hover:opacity-90">Refer an Engineer</button>
-            </form>
-          </div>
-          <div class="bg-surface rounded-lg p-6 border border-white/5 transition-colors duration-200 ease-out hover:border-white/10">
-            <h3 class="font-display text-lg font-semibold mb-2">Want access to Nigeria market data?</h3>
-            <p class="text-sm text-muted leading-relaxed mb-4">Get the ground-truth data layer before anyone else does.</p>
-            <form action="[FORMSPREE_ENDPOINT_PLACEHOLDER]" method="POST">
-              <label for="investors-email" class="sr-only">Your email</label>
-              <input type="email" id="investors-email" name="email" required placeholder="you@fund.com" class="w-full rounded-lg p-3 mb-4 bg-bg border border-white/10 text-primary transition-colors duration-200 focus:outline-none focus:border-accent" />
-              <input type="hidden" name="audience" value="investors" />
-              <button type="submit" class="w-full bg-accent text-bg font-semibold font-mono text-sm uppercase tracking-wide rounded-lg p-3 transition-opacity duration-200 hover:opacity-90">Request Access</button>
-            </form>
-          </div>
+        <div class="max-w-md bg-surface rounded-lg p-6 border border-white/5">
+          <p class="text-sm text-muted leading-relaxed mb-4">Tell us where you fit, and we'll follow up.</p>
+          <form action="[FORMSPREE_ENDPOINT_PLACEHOLDER]" method="POST">
+            <label for="role" class="sr-only">I am a</label>
+            <div class="relative mb-4">
+              <select id="role" name="audience" required class="w-full appearance-none rounded-lg p-3 pr-10 bg-bg border border-white/10 text-primary transition-colors duration-200 focus:outline-none focus:border-accent">
+                <option value="" disabled selected>I am a...</option>
+                <option value="companies">Company (post a problem)</option>
+                <option value="engineers">Engineer (or referring one)</option>
+                <option value="investors">Investor (want the data)</option>
+              </select>
+              <span class="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-muted">▾</span>
+            </div>
+            <label for="cta-email" class="sr-only">Your email</label>
+            <input type="email" id="cta-email" name="email" required placeholder="you@email.com" class="w-full rounded-lg p-3 mb-4 bg-bg border border-white/10 text-primary transition-colors duration-200 focus:outline-none focus:border-accent" />
+            <button type="submit" class="w-full bg-accent text-bg font-semibold font-mono text-sm uppercase tracking-wide rounded-lg p-3 transition-opacity duration-200 hover:opacity-90">Count Me In</button>
+          </form>
         </div>
       </div>
     </section>
   </main>
-
-  <footer class="max-w-[1100px] mx-auto px-4 sm:px-6 py-8">
-    <p class="font-mono text-xs text-muted uppercase tracking-wide">Internal draft — July 14, 2026</p>
-  </footer>
 </body>
 </html>
