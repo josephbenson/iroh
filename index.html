@@ -3,7 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Iroh — African Engineering Talent Marketplace</title>
+  <title>Iroh — Real Problems. Real Engineers. Real Data.</title>
+  <meta name="description" content="A data-first platform pairing Nigerian engineering talent with real company R&D problems — while mapping the market for the first time." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,700;1,9..144,600&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet" />
+
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
@@ -15,30 +21,59 @@
             accent: '#E8FF47',
             primary: '#F5F5F5',
             muted: '#888888'
+          },
+          fontFamily: {
+            sans: ['"IBM Plex Sans"', 'system-ui', '-apple-system', 'sans-serif'],
+            display: ['"Fraunces"', 'serif'],
+            mono: ['"IBM Plex Mono"', 'ui-monospace', 'monospace']
           }
         }
       }
     }
   </script>
+
+  <style>
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(14px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-up {
+      opacity: 0;
+      animation: fadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+    @keyframes dashFlow {
+      to { stroke-dashoffset: -24; }
+    }
+    .flywheel-loop-path {
+      stroke-dasharray: 6 6;
+      animation: dashFlow 1.4s linear infinite;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .animate-fade-up { animation: none; opacity: 1; }
+      .flywheel-loop-path { animation: none; }
+    }
+  </style>
 </head>
 <body class="bg-bg text-primary font-sans antialiased">
   <main>
-    <section id="hero" class="py-16 md:py-24">
-      <div class="max-w-[1100px] mx-auto px-4 sm:px-6">
-        <h1 class="text-3xl md:text-5xl font-bold tracking-tight leading-tight mb-6">African Engineering Talent. Real Company Problems. Ground-Truth Market Data.</h1>
-        <p class="text-lg md:text-xl text-muted max-w-2xl mb-8 md:mb-10">A curated platform where companies post real R&amp;D problems, engineers build verifiable portfolios, and a data layer maps the Nigerian market — for the first time.</p>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-          <div class="bg-surface rounded-lg p-6 border border-white/5">
-            <p class="text-sm text-accent font-medium uppercase tracking-wide mb-2">For Companies</p>
-            <p class="text-base leading-relaxed">Post a real problem. Get tangible outputs.</p>
+    <section id="hero" class="relative overflow-hidden py-20 md:py-32">
+      <div class="absolute inset-0 opacity-40 [background-image:radial-gradient(rgba(245,245,245,0.08)_1px,transparent_1px)] [background-size:24px_24px] [mask-image:linear-gradient(to_bottom,black,transparent_85%)]"></div>
+      <div class="relative max-w-[1100px] mx-auto px-4 sm:px-6">
+        <p class="animate-fade-up font-mono text-xs text-accent uppercase tracking-[0.2em] mb-4" style="animation-delay:0ms">A data-first talent platform for Nigeria</p>
+        <h1 class="animate-fade-up font-display text-4xl md:text-6xl font-semibold tracking-tight leading-[1.08] mb-6" style="animation-delay:90ms">Real problems. Real engineers. Real data on a market nobody's mapped.</h1>
+        <p class="animate-fade-up text-lg md:text-xl text-muted max-w-2xl mb-10 leading-relaxed" style="animation-delay:180ms">Companies post real R&amp;D problems. Engineers build verifiable portfolios solving them. Every project maps a corner of the Nigerian market that's never been measured.</p>
+        <div class="animate-fade-up grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6" style="animation-delay:270ms">
+          <div class="bg-surface rounded-lg p-6 border border-white/5 transition-all duration-200 ease-out hover:border-white/10 hover:-translate-y-0.5">
+            <p class="font-mono text-sm text-accent font-medium uppercase tracking-wide mb-2">For Companies</p>
+            <p class="text-base leading-relaxed">Post a real problem. Get a working prototype, not a pitch deck.</p>
           </div>
-          <div class="bg-surface rounded-lg p-6 border border-white/5">
-            <p class="text-sm text-accent font-medium uppercase tracking-wide mb-2">For Engineers</p>
-            <p class="text-base leading-relaxed">Qualify, build, and get in front of the people who matter.</p>
+          <div class="bg-surface rounded-lg p-6 border border-white/5 transition-all duration-200 ease-out hover:border-white/10 hover:-translate-y-0.5">
+            <p class="font-mono text-sm text-accent font-medium uppercase tracking-wide mb-2">For Engineers</p>
+            <p class="text-base leading-relaxed">Build something real. Get seen by the people who hire.</p>
           </div>
-          <div class="bg-surface rounded-lg p-6 border border-white/5">
-            <p class="text-sm text-accent font-medium uppercase tracking-wide mb-2">For Investors</p>
-            <p class="text-base leading-relaxed">Access ground-truth Nigeria market data.</p>
+          <div class="bg-surface rounded-lg p-6 border border-white/5 transition-all duration-200 ease-out hover:border-white/10 hover:-translate-y-0.5">
+            <p class="font-mono text-sm text-accent font-medium uppercase tracking-wide mb-2">For Investors</p>
+            <p class="text-base leading-relaxed">See the Nigerian market as it actually is — not as decks describe it.</p>
           </div>
         </div>
       </div>
@@ -46,22 +81,23 @@
 
     <section id="problem" class="py-16 md:py-24">
       <div class="max-w-[1100px] mx-auto px-4 sm:px-6">
-        <h2 class="text-2xl md:text-3xl font-bold mb-8 md:mb-10">The Problem</h2>
+        <p class="font-mono text-xs text-accent uppercase tracking-[0.2em] mb-3">The Gap</p>
+        <h2 class="font-display text-2xl md:text-4xl font-semibold mb-8 md:mb-10">The Problem</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-          <div class="bg-surface rounded-lg p-6 border border-white/5">
-            <h3 class="text-lg font-semibold mb-4">Talent</h3>
-            <ul class="list-disc list-inside space-y-2">
-              <li class="text-base leading-relaxed">Nigerian engineering talent is high-agency but invisible to global capital</li>
-              <li class="text-base leading-relaxed">No single company has the hardware + software + AI depth for niche problems</li>
-              <li class="text-base leading-relaxed">Existing programs get bypassed — talent gets poached without platform value accruing</li>
+          <div class="bg-surface rounded-lg p-6 border border-white/5 transition-colors duration-200 ease-out hover:border-white/10">
+            <h3 class="font-display text-lg font-semibold mb-4">Talent</h3>
+            <ul class="list-disc list-inside space-y-2 marker:text-accent">
+              <li class="text-base leading-relaxed">Nigerian engineers are high-agency, world-class, and invisible to the capital that could fund them</li>
+              <li class="text-base leading-relaxed">No single company here has the hardware, software, and AI depth to staff niche R&amp;D problems</li>
+              <li class="text-base leading-relaxed">The programs that do exist get bypassed — talent gets poached, and the platform that built them captures nothing</li>
             </ul>
           </div>
-          <div class="bg-surface rounded-lg p-6 border border-white/5">
-            <h3 class="text-lg font-semibold mb-4">Data</h3>
-            <ul class="list-disc list-inside space-y-2">
-              <li class="text-base leading-relaxed">No reliable ground-truth data on the Nigerian market — input costs, agent numbers, infrastructure</li>
-              <li class="text-base leading-relaxed">Hidden resources exist (government labs, mini-grids, long-term mortgages) but are unmapped</li>
-              <li class="text-base leading-relaxed">Without this data, diaspora capital and foreign investors can't make informed decisions</li>
+          <div class="bg-surface rounded-lg p-6 border border-white/5 transition-colors duration-200 ease-out hover:border-white/10">
+            <h3 class="font-display text-lg font-semibold mb-4">Data</h3>
+            <ul class="list-disc list-inside space-y-2 marker:text-accent">
+              <li class="text-base leading-relaxed">Nobody has reliable ground-truth data on the Nigerian market — not input costs, not agent density, not real infrastructure</li>
+              <li class="text-base leading-relaxed">Real resources — government labs, mini-grids, long-term mortgages — sit unmapped and invisible</li>
+              <li class="text-base leading-relaxed">Without that data, diaspora capital and foreign investors are deciding blind</li>
             </ul>
           </div>
         </div>
@@ -70,22 +106,23 @@
 
     <section id="how-it-works" class="py-16 md:py-24">
       <div class="max-w-[1100px] mx-auto px-4 sm:px-6">
-        <h2 class="text-2xl md:text-3xl font-bold mb-8 md:mb-10">How It Works</h2>
+        <p class="font-mono text-xs text-accent uppercase tracking-[0.2em] mb-3">The Mechanism</p>
+        <h2 class="font-display text-2xl md:text-4xl font-semibold mb-8 md:mb-10">How It Works</h2>
         <ol class="grid grid-cols-1 gap-4 md:gap-6">
-          <li class="bg-surface rounded-lg p-6 border border-white/5">
-            <p class="text-sm text-accent font-medium uppercase tracking-wide mb-2">Layer 1</p>
-            <h3 class="text-lg font-semibold mb-2">Data Collection</h3>
-            <p class="text-base leading-relaxed">Organized youth groups (NYSC cohorts, university clubs, JCI) collect narrow, specific datasets. Incentive: diaspora network access, not cash.</p>
+          <li class="bg-surface rounded-lg p-6 border border-white/5 transition-colors duration-200 ease-out hover:border-white/10">
+            <p class="font-mono text-sm text-accent font-medium uppercase tracking-wide mb-2">Layer 1</p>
+            <h3 class="font-display text-lg font-semibold mb-2">Data Collection</h3>
+            <p class="text-base leading-relaxed">Youth groups already on the ground — NYSC cohorts, university clubs, JCI chapters — collect narrow, specific datasets. They're paid in access to the diaspora network, not cash.</p>
           </li>
-          <li class="bg-surface rounded-lg p-6 border border-white/5">
-            <p class="text-sm text-accent font-medium uppercase tracking-wide mb-2">Layer 2</p>
-            <h3 class="text-lg font-semibold mb-2">Skills Pipeline</h3>
-            <p class="text-base leading-relaxed">Data collectors feed into the fellowship. Engineers qualify via a curated free learning path — no curriculum to build, just a filter.</p>
+          <li class="bg-surface rounded-lg p-6 border border-white/5 transition-colors duration-200 ease-out hover:border-white/10">
+            <p class="font-mono text-sm text-accent font-medium uppercase tracking-wide mb-2">Layer 2</p>
+            <h3 class="font-display text-lg font-semibold mb-2">Skills Pipeline</h3>
+            <p class="text-base leading-relaxed">Data collectors move into the fellowship. Engineers qualify through one free, curated learning path — we're not building a curriculum, just a filter for who's ready.</p>
           </li>
-          <li class="bg-surface rounded-lg p-6 border border-white/5">
-            <p class="text-sm text-accent font-medium uppercase tracking-wide mb-2">Layer 3</p>
-            <h3 class="text-lg font-semibold mb-2">R&amp;D Marketplace</h3>
-            <p class="text-base leading-relaxed">Companies post real problems with attached budgets. Engineers deliver tangible outputs. Universities supervise for QA.</p>
+          <li class="bg-surface rounded-lg p-6 border border-white/5 transition-colors duration-200 ease-out hover:border-white/10">
+            <p class="font-mono text-sm text-accent font-medium uppercase tracking-wide mb-2">Layer 3</p>
+            <h3 class="font-display text-lg font-semibold mb-2">R&amp;D Marketplace</h3>
+            <p class="text-base leading-relaxed">Companies post real problems with real budgets attached. Engineers deliver working outputs. Universities supervise for quality, so nothing ships unverified.</p>
           </li>
         </ol>
       </div>
@@ -93,19 +130,24 @@
 
     <section id="different" class="py-16 md:py-24">
       <div class="max-w-[1100px] mx-auto px-4 sm:px-6">
-        <h2 class="text-2xl md:text-3xl font-bold mb-8 md:mb-10">What Makes This Different</h2>
+        <p class="font-mono text-xs text-accent uppercase tracking-[0.2em] mb-3">The Edge</p>
+        <h2 class="font-display text-2xl md:text-4xl font-semibold mb-8 md:mb-10">What Makes This Different</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
-          <div class="bg-surface rounded-lg p-6 border border-white/5">
-            <p class="text-base leading-relaxed">Niche combo projects nobody else can staff: hardware + software + AI</p>
+          <div class="bg-surface rounded-lg p-6 border border-white/5 transition-colors duration-200 ease-out hover:border-white/10">
+            <p class="font-mono text-xs text-muted uppercase tracking-wide mb-2">The Combo</p>
+            <p class="text-base leading-relaxed">The only place staffed for hardware + software + AI problems — no single company here has all three.</p>
           </div>
-          <div class="bg-surface rounded-lg p-6 border border-white/5">
-            <p class="text-base leading-relaxed">Access over cash as the incentive — attracts high-agency people, not prize-hunters</p>
+          <div class="bg-surface rounded-lg p-6 border border-white/5 transition-colors duration-200 ease-out hover:border-white/10">
+            <p class="font-mono text-xs text-muted uppercase tracking-wide mb-2">The Incentive</p>
+            <p class="text-base leading-relaxed">Access, not cash, is the draw. That filters for high-agency builders, not prize-hunters.</p>
           </div>
-          <div class="bg-surface rounded-lg p-6 border border-white/5">
-            <p class="text-base leading-relaxed">Ground-truth data layer — market intelligence as a byproduct, not an afterthought</p>
+          <div class="bg-surface rounded-lg p-6 border border-white/5 transition-colors duration-200 ease-out hover:border-white/10">
+            <p class="font-mono text-xs text-muted uppercase tracking-wide mb-2">The Data</p>
+            <p class="text-base leading-relaxed">The ground-truth data layer isn't the product — it's the exhaust from doing the work.</p>
           </div>
-          <div class="bg-surface rounded-lg p-6 border border-white/5">
-            <p class="text-base leading-relaxed">Proof of concept: two cohorts already run, ~$6K/year cost</p>
+          <div class="bg-surface rounded-lg p-6 border border-white/5 transition-colors duration-200 ease-out hover:border-white/10">
+            <p class="font-mono text-xs text-muted uppercase tracking-wide mb-2">The Proof</p>
+            <p class="text-base leading-relaxed">Two cohorts already shipped. Total cost: about $6K a year.</p>
           </div>
         </div>
       </div>
@@ -113,54 +155,67 @@
 
     <section id="flywheel" class="py-16 md:py-24">
       <div class="max-w-[1100px] mx-auto px-4 sm:px-6">
-        <h2 class="text-2xl md:text-3xl font-bold mb-8 md:mb-10">The Flywheel</h2>
-        <div class="flex flex-col md:flex-row items-center gap-2 md:flex-wrap md:justify-center">
-          <div class="bg-surface rounded-lg p-4 border border-white/5 text-center">
-            <p class="text-base leading-relaxed">Data collectors</p>
+        <p class="font-mono text-xs text-accent uppercase tracking-[0.2em] mb-3">The Engine</p>
+        <h2 class="font-display text-2xl md:text-4xl font-semibold mb-8 md:mb-10">The Flywheel</h2>
+        <div class="relative">
+          <div class="flex flex-col md:flex-row items-center gap-2 md:flex-wrap md:justify-center">
+            <div class="bg-surface rounded-lg p-4 border border-white/5 text-center">
+              <p class="text-base leading-relaxed">Data collectors</p>
+            </div>
+            <span class="md:hidden text-muted">↓</span>
+            <span class="hidden md:inline text-muted">→</span>
+            <div class="bg-surface rounded-lg p-4 border border-white/5 text-center">
+              <p class="text-base leading-relaxed">Engineers</p>
+            </div>
+            <span class="md:hidden text-muted">↓</span>
+            <span class="hidden md:inline text-muted">→</span>
+            <div class="bg-surface rounded-lg p-4 border border-white/5 text-center">
+              <p class="text-base leading-relaxed">Portfolio</p>
+            </div>
+            <span class="md:hidden text-muted">↓</span>
+            <span class="hidden md:inline text-muted">→</span>
+            <div class="bg-surface rounded-lg p-4 border border-white/5 text-center">
+              <p class="text-base leading-relaxed">Global Tenders</p>
+            </div>
+            <span class="md:hidden text-muted">↓</span>
+            <span class="hidden md:inline text-muted">→</span>
+            <div class="bg-surface rounded-lg p-4 border border-white/5 text-center">
+              <p class="text-base leading-relaxed">Fund next cohort</p>
+            </div>
+            <span class="md:hidden text-muted">↓</span>
+            <span class="hidden md:inline text-muted">→</span>
+            <div class="bg-surface rounded-lg p-4 border border-accent text-accent text-center">
+              <p class="text-base leading-relaxed">Repeat</p>
+            </div>
           </div>
-          <span class="md:hidden text-muted">↓</span>
-          <span class="hidden md:inline text-muted">→</span>
-          <div class="bg-surface rounded-lg p-4 border border-white/5 text-center">
-            <p class="text-base leading-relaxed">Engineers</p>
+
+          <!-- Signature: loop-back arc showing the cycle closes, desktop only -->
+          <div class="hidden md:block relative h-14 mt-3" aria-hidden="true">
+            <svg viewBox="0 0 1000 100" preserveAspectRatio="none" class="w-full h-full">
+              <path d="M 970 8 C 970 76, 30 76, 30 8" fill="none" stroke="#E8FF47" stroke-width="2" stroke-linecap="round" opacity="0.55" class="flywheel-loop-path" />
+              <polygon points="30,8 42,2 42,14" fill="#E8FF47" opacity="0.55" />
+            </svg>
           </div>
-          <span class="md:hidden text-muted">↓</span>
-          <span class="hidden md:inline text-muted">→</span>
-          <div class="bg-surface rounded-lg p-4 border border-white/5 text-center">
-            <p class="text-base leading-relaxed">Portfolio</p>
-          </div>
-          <span class="md:hidden text-muted">↓</span>
-          <span class="hidden md:inline text-muted">→</span>
-          <div class="bg-surface rounded-lg p-4 border border-white/5 text-center">
-            <p class="text-base leading-relaxed">Global Tenders</p>
-          </div>
-          <span class="md:hidden text-muted">↓</span>
-          <span class="hidden md:inline text-muted">→</span>
-          <div class="bg-surface rounded-lg p-4 border border-white/5 text-center">
-            <p class="text-base leading-relaxed">Fund next cohort</p>
-          </div>
-          <span class="md:hidden text-muted">↓</span>
-          <span class="hidden md:inline text-muted">→</span>
-          <div class="bg-surface rounded-lg p-4 border border-accent text-accent text-center">
-            <p class="text-base leading-relaxed">Repeat</p>
-          </div>
+          <p class="font-mono text-[11px] text-muted uppercase tracking-[0.2em] text-center md:-mt-2">↻ the cycle compounds each cohort</p>
         </div>
       </div>
     </section>
 
     <section id="team" class="py-16 md:py-24">
       <div class="max-w-[1100px] mx-auto px-4 sm:px-6">
-        <h2 class="text-2xl md:text-3xl font-bold mb-8 md:mb-10">Who's Behind This</h2>
+        <p class="font-mono text-xs text-accent uppercase tracking-[0.2em] mb-3">The Team</p>
+        <h2 class="font-display text-2xl md:text-4xl font-semibold mb-8 md:mb-10">Who's Behind This</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
-          <div class="bg-surface rounded-lg p-6 border border-white/5">
+          <div class="bg-surface rounded-lg p-6 border border-white/5 transition-colors duration-200 ease-out hover:border-white/10">
             <div class="w-16 h-16 rounded-full bg-surface border border-white/10 mb-4"></div>
-            <h3 class="text-lg font-semibold">[PLACEHOLDER] Name</h3>
-            <p class="text-sm text-accent font-medium uppercase tracking-wide">[PLACEHOLDER] Title</p>
+            <h3 class="font-display text-lg font-semibold">[PLACEHOLDER] Name</h3>
+            <p class="font-mono text-sm text-accent font-medium uppercase tracking-wide">[PLACEHOLDER] Title</p>
             <p class="text-base leading-relaxed text-muted">[PLACEHOLDER] One-line bio</p>
           </div>
-          <div class="bg-surface rounded-lg p-6 border border-white/5">
+          <div class="bg-surface rounded-lg p-6 border border-white/5 transition-colors duration-200 ease-out hover:border-white/10">
             <div class="w-16 h-16 rounded-full bg-surface border border-white/10 mb-4"></div>
-            <h3 class="text-lg font-semibold">[PLACEHOLDER] Name</h3>
-            <p class="text-sm text-accent font-medium uppercase tracking-wide">[PLACEHOLDER] Title</p>
+            <h3 class="font-display text-lg font-semibold">[PLACEHOLDER] Name</h3>
+            <p class="font-mono text-sm text-accent font-medium uppercase tracking-wide">[PLACEHOLDER] Title</p>
             <p class="text-base leading-relaxed text-muted">[PLACEHOLDER] One-line bio</p>
           </div>
         </div>
@@ -169,33 +224,37 @@
 
     <section id="cta" class="py-16 md:py-24">
       <div class="max-w-[1100px] mx-auto px-4 sm:px-6">
-        <h2 class="text-2xl md:text-3xl font-bold mb-8 md:mb-10">Get Involved</h2>
+        <p class="font-mono text-xs text-accent uppercase tracking-[0.2em] mb-3">Get Involved</p>
+        <h2 class="font-display text-2xl md:text-4xl font-semibold mb-8 md:mb-10">Where Do You Fit?</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
-          <div class="bg-surface rounded-lg p-6 border border-white/5">
-            <h3 class="text-lg font-semibold mb-4">Interested in posting a project?</h3>
+          <div class="bg-surface rounded-lg p-6 border border-white/5 transition-colors duration-200 ease-out hover:border-white/10">
+            <h3 class="font-display text-lg font-semibold mb-2">Interested in posting a project?</h3>
+            <p class="text-sm text-muted leading-relaxed mb-4">Bring a real R&amp;D problem. We'll match it with engineers who can actually solve it.</p>
             <form action="[FORMSPREE_ENDPOINT_PLACEHOLDER]" method="POST">
               <label for="companies-email" class="sr-only">Your company email</label>
-              <input type="email" id="companies-email" name="email" required placeholder="you@company.com" class="w-full rounded-lg p-3 mb-4 bg-bg border border-white/10 text-primary" />
+              <input type="email" id="companies-email" name="email" required placeholder="you@company.com" class="w-full rounded-lg p-3 mb-4 bg-bg border border-white/10 text-primary transition-colors duration-200 focus:outline-none focus:border-accent" />
               <input type="hidden" name="audience" value="companies" />
-              <button type="submit" class="w-full bg-accent text-bg font-semibold rounded-lg p-3">Submit</button>
+              <button type="submit" class="w-full bg-accent text-bg font-semibold font-mono text-sm uppercase tracking-wide rounded-lg p-3 transition-opacity duration-200 hover:opacity-90">Post a Problem</button>
             </form>
           </div>
-          <div class="bg-surface rounded-lg p-6 border border-white/5">
-            <h3 class="text-lg font-semibold mb-4">Know a high-agency engineer?</h3>
+          <div class="bg-surface rounded-lg p-6 border border-white/5 transition-colors duration-200 ease-out hover:border-white/10">
+            <h3 class="font-display text-lg font-semibold mb-2">Know a high-agency engineer?</h3>
+            <p class="text-sm text-muted leading-relaxed mb-4">Refer someone high-agency. If they qualify, they're in the pipeline.</p>
             <form action="[FORMSPREE_ENDPOINT_PLACEHOLDER]" method="POST">
               <label for="engineers-email" class="sr-only">Your email</label>
-              <input type="email" id="engineers-email" name="email" required placeholder="you@company.com" class="w-full rounded-lg p-3 mb-4 bg-bg border border-white/10 text-primary" />
+              <input type="email" id="engineers-email" name="email" required placeholder="you@example.com" class="w-full rounded-lg p-3 mb-4 bg-bg border border-white/10 text-primary transition-colors duration-200 focus:outline-none focus:border-accent" />
               <input type="hidden" name="audience" value="engineers" />
-              <button type="submit" class="w-full bg-accent text-bg font-semibold rounded-lg p-3">Submit</button>
+              <button type="submit" class="w-full bg-accent text-bg font-semibold font-mono text-sm uppercase tracking-wide rounded-lg p-3 transition-opacity duration-200 hover:opacity-90">Refer an Engineer</button>
             </form>
           </div>
-          <div class="bg-surface rounded-lg p-6 border border-white/5">
-            <h3 class="text-lg font-semibold mb-4">Want access to Nigeria market data?</h3>
+          <div class="bg-surface rounded-lg p-6 border border-white/5 transition-colors duration-200 ease-out hover:border-white/10">
+            <h3 class="font-display text-lg font-semibold mb-2">Want access to Nigeria market data?</h3>
+            <p class="text-sm text-muted leading-relaxed mb-4">Get the ground-truth data layer before anyone else does.</p>
             <form action="[FORMSPREE_ENDPOINT_PLACEHOLDER]" method="POST">
               <label for="investors-email" class="sr-only">Your email</label>
-              <input type="email" id="investors-email" name="email" required placeholder="you@company.com" class="w-full rounded-lg p-3 mb-4 bg-bg border border-white/10 text-primary" />
+              <input type="email" id="investors-email" name="email" required placeholder="you@fund.com" class="w-full rounded-lg p-3 mb-4 bg-bg border border-white/10 text-primary transition-colors duration-200 focus:outline-none focus:border-accent" />
               <input type="hidden" name="audience" value="investors" />
-              <button type="submit" class="w-full bg-accent text-bg font-semibold rounded-lg p-3">Submit</button>
+              <button type="submit" class="w-full bg-accent text-bg font-semibold font-mono text-sm uppercase tracking-wide rounded-lg p-3 transition-opacity duration-200 hover:opacity-90">Request Access</button>
             </form>
           </div>
         </div>
@@ -204,7 +263,7 @@
   </main>
 
   <footer class="max-w-[1100px] mx-auto px-4 sm:px-6 py-8">
-    <p class="text-muted text-sm">Internal draft — July 14, 2026</p>
+    <p class="font-mono text-xs text-muted uppercase tracking-wide">Internal draft — July 14, 2026</p>
   </footer>
 </body>
 </html>
